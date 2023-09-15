@@ -40,6 +40,10 @@ app.use((req, res, next) => {
 });
 
 //sign in
+
+  app.post("/", (req, res) => {
+ res.send("hello);
+});
 app.post("/", (req, res) => {
   const userLogin = req.body;
   User.findOne({ username: userLogin.username }).then((dbUser) => {
